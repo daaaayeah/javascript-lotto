@@ -582,7 +582,7 @@ var ResultModal = /*#__PURE__*/function (_Component) {
   }, {
     key: "template",
     value: function template(result) {
-      return "\n      <article class=\"d-flex\">\n        <img src=\"".concat(_images_close_png__WEBPACK_IMPORTED_MODULE_4__["default"], "\" class=\"close\"></img>\n        <h3>\uD83C\uDFC6 \uB2F9\uCCA8 \uD1B5\uACC4 \uD83C\uDFC6</h3>\n        <table>\n          <thead>\n            <tr>\n              <th>\uC77C\uCE58 \uAC1C\uC218</th>\n              <th>\uB2F9\uCCA8\uAE08</th>\n              <th>\uB2F9\uCCA8 \uAC1C\uC218</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <td>3\uAC1C</td>\n              <td>").concat(_constants__WEBPACK_IMPORTED_MODULE_3__.PRIZE_MONEY.FIFTH.toLocaleString(), "</td>\n              <td>").concat(result.winningCounts.fifth, "\uAC1C</td>\n            </tr>\n            <tr>\n              <td>4\uAC1C</td>\n              <td>").concat(_constants__WEBPACK_IMPORTED_MODULE_3__.PRIZE_MONEY.FOURTH.toLocaleString(), "</td>\n              <td>").concat(result.winningCounts.fourth, "\uAC1C</td>\n            </tr>\n            <tr>\n              <td>5\uAC1C</td>\n              <td>").concat(_constants__WEBPACK_IMPORTED_MODULE_3__.PRIZE_MONEY.THIRD.toLocaleString(), "</td>\n              <td>").concat(result.winningCounts.third, "\uAC1C</td>\n            </tr>\n            <tr>\n              <td>5\uAC1C+\uBCF4\uB108\uC2A4\uBCFC</td>\n              <td>").concat(_constants__WEBPACK_IMPORTED_MODULE_3__.PRIZE_MONEY.SECOND.toLocaleString(), "</td>\n              <td>").concat(result.winningCounts.second, "\uAC1C</td>\n            </tr>\n            <tr>\n              <td>6\uAC1C</td>\n              <td>").concat(_constants__WEBPACK_IMPORTED_MODULE_3__.PRIZE_MONEY.FIRST.toLocaleString(), "</td>\n              <td>").concat(result.winningCounts.first, "\uAC1C</td>\n            </tr>\n          </tbody>\n        </table>\n        <label><b>\uB2F9\uC2E0\uC758 \uCD1D \uC218\uC775\uB960\uC740 ").concat(result.earningsRate, "%\uC785\uB2C8\uB2E4.</b></label>\n        <button class=\"restart btn btn-cyan mt-8\">\uB2E4\uC2DC \uC2DC\uC791\uD558\uAE30</button>\n      </article>\n    ");
+      return "\n      <article class=\"d-flex\">\n        <img src=\"".concat(_images_close_png__WEBPACK_IMPORTED_MODULE_4__["default"], "\" class=\"close\"></img>\n        <h3>\uD83C\uDFC6 \uB2F9\uCCA8 \uD1B5\uACC4 \uD83C\uDFC6</h3>\n        <table>\n          <thead>\n            <tr>\n              <th>\uC77C\uCE58 \uAC1C\uC218</th>\n              <th>\uB2F9\uCCA8\uAE08</th>\n              <th>\uB2F9\uCCA8 \uAC1C\uC218</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <td>3\uAC1C</td>\n              <td>").concat(_constants__WEBPACK_IMPORTED_MODULE_3__.PRIZE_MONEY["5th"].toLocaleString(), "</td>\n              <td>").concat(result.winningCounts['5th'], "\uAC1C</td>\n            </tr>\n            <tr>\n              <td>4\uAC1C</td>\n              <td>").concat(_constants__WEBPACK_IMPORTED_MODULE_3__.PRIZE_MONEY["4th"].toLocaleString(), "</td>\n              <td>").concat(result.winningCounts['4th'], "\uAC1C</td>\n            </tr>\n            <tr>\n              <td>5\uAC1C</td>\n              <td>").concat(_constants__WEBPACK_IMPORTED_MODULE_3__.PRIZE_MONEY["3rd"].toLocaleString(), "</td>\n              <td>").concat(result.winningCounts['3rd'], "\uAC1C</td>\n            </tr>\n            <tr>\n              <td>5\uAC1C+\uBCF4\uB108\uC2A4\uBCFC</td>\n              <td>").concat(_constants__WEBPACK_IMPORTED_MODULE_3__.PRIZE_MONEY["2nd"].toLocaleString(), "</td>\n              <td>").concat(result.winningCounts['2nd'], "\uAC1C</td>\n            </tr>\n            <tr>\n              <td>6\uAC1C</td>\n              <td>").concat(_constants__WEBPACK_IMPORTED_MODULE_3__.PRIZE_MONEY["1st"].toLocaleString(), "</td>\n              <td>").concat(result.winningCounts['1st'], "\uAC1C</td>\n            </tr>\n          </tbody>\n        </table>\n        <label><b>\uB2F9\uC2E0\uC758 \uCD1D \uC218\uC775\uB960\uC740 ").concat(result.earningsRate, "%\uC785\uB2C8\uB2E4.</b></label>\n        <button class=\"restart btn btn-cyan mt-8\">\uB2E4\uC2DC \uC2DC\uC791\uD558\uAE30</button>\n      </article>\n    ");
     }
   }, {
     key: "setEvent",
@@ -777,17 +777,17 @@ var LOTTO = {
   PRICE: 1000
 };
 var MATCH_COUNT = {
-  FIRST: 6,
-  THIRD: 5,
-  FOURTH: 4,
-  FIFTH: 3
+  '1st': 6,
+  '3rd': 5,
+  '4th': 4,
+  '5th': 3
 };
 var PRIZE_MONEY = {
-  FIRST: 2000000000,
-  SECOND: 30000000,
-  THIRD: 1500000,
-  FOURTH: 50000,
-  FIFTH: 5000
+  '1st': 2000000000,
+  '2nd': 30000000,
+  '3rd': 1500000,
+  '4th': 50000,
+  '5th': 5000
 };
 
 /***/ }),
@@ -853,11 +853,11 @@ var initialState = {
   resultModalVisibility: false,
   result: {
     winningCounts: {
-      fifth: 0,
-      fourth: 0,
-      third: 0,
-      second: 0,
-      first: 0
+      '5th': 0,
+      '4th': 0,
+      '3rd': 0,
+      '2nd': 0,
+      '1st': 0
     },
     earningsRate: 0
   }
@@ -893,7 +893,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var generateLottoList = function generateLottoList(money) {
   var lottoList = [];
-  var count = Math.floor(money / 1000);
+  var count = Math.floor(money / _constants__WEBPACK_IMPORTED_MODULE_2__.LOTTO.PRICE);
 
   for (var i = 0; i < count; i += 1) {
     var RANGE = _constants__WEBPACK_IMPORTED_MODULE_2__.LOTTO.RANGE,
@@ -907,11 +907,11 @@ var generateLottoList = function generateLottoList(money) {
 
 var generateWinningCounts = function generateWinningCounts(winningNumbers, bonusNumber) {
   var winningCounts = {
-    fifth: 0,
-    fourth: 0,
-    third: 0,
-    second: 0,
-    first: 0
+    '5th': 0,
+    '4th': 0,
+    '3rd': 0,
+    '2nd': 0,
+    '1st': 0
   };
 
   var _window$store$getStat = window.store.getState(),
@@ -922,25 +922,25 @@ var generateWinningCounts = function generateWinningCounts(winningNumbers, bonus
     var winningCount = (0,_utils__WEBPACK_IMPORTED_MODULE_3__.intersection)(lottoItem, winningNumbers).length;
 
     switch (winningCount) {
-      case _constants__WEBPACK_IMPORTED_MODULE_2__.MATCH_COUNT.FIFTH:
-        winningCounts.fifth += 1;
+      case _constants__WEBPACK_IMPORTED_MODULE_2__.MATCH_COUNT["5th"]:
+        winningCounts['5th'] += 1;
         break;
 
-      case _constants__WEBPACK_IMPORTED_MODULE_2__.MATCH_COUNT.FOURTH:
-        winningCounts.fourth += 1;
+      case _constants__WEBPACK_IMPORTED_MODULE_2__.MATCH_COUNT["4th"]:
+        winningCounts['4th'] += 1;
         break;
 
-      case _constants__WEBPACK_IMPORTED_MODULE_2__.MATCH_COUNT.THIRD:
+      case _constants__WEBPACK_IMPORTED_MODULE_2__.MATCH_COUNT["3rd"]:
         if (!lottoItem.includes(bonusNumber)) {
-          winningCounts.third += 1;
+          winningCounts['3rd'] += 1;
           break;
         }
 
-        winningCounts.second += 1;
+        winningCounts['2nd'] += 1;
         break;
 
-      case _constants__WEBPACK_IMPORTED_MODULE_2__.MATCH_COUNT.FIRST:
-        winningCounts.first += 1;
+      case _constants__WEBPACK_IMPORTED_MODULE_2__.MATCH_COUNT["1st"]:
+        winningCounts['1st'] += 1;
         break;
       // no default
     }
@@ -952,14 +952,16 @@ var generateEarningsRate = function generateEarningsRate(winningCounts) {
   var _window$store$getStat2 = window.store.getState(),
       money = _window$store$getStat2.money;
 
-  var currentMoney = winningCounts.fifth * _constants__WEBPACK_IMPORTED_MODULE_2__.PRIZE_MONEY.FIFTH + winningCounts.fourth * _constants__WEBPACK_IMPORTED_MODULE_2__.PRIZE_MONEY.FOURTH + winningCounts.third * _constants__WEBPACK_IMPORTED_MODULE_2__.PRIZE_MONEY.THIRD + winningCounts.second * _constants__WEBPACK_IMPORTED_MODULE_2__.PRIZE_MONEY.SECOND + winningCounts.first * _constants__WEBPACK_IMPORTED_MODULE_2__.PRIZE_MONEY.FIRST;
+  var currentMoney = Object.keys(winningCounts).reduce(function (acc, rank) {
+    return acc + winningCounts[rank] * _constants__WEBPACK_IMPORTED_MODULE_2__.PRIZE_MONEY[rank];
+  }, 0);
   return (0,_utils__WEBPACK_IMPORTED_MODULE_3__.calculateEarningsRate)(money, currentMoney);
 };
 
 var generateResult = function generateResult(winningNumber) {
   var result = {};
-  var winningNumbers = winningNumber.slice(0, _constants__WEBPACK_IMPORTED_MODULE_2__.LOTTO.COUNT);
-  var bonusNumber = winningNumber[_constants__WEBPACK_IMPORTED_MODULE_2__.LOTTO.COUNT];
+  var winningNumbers = winningNumber.slice(0, _constants__WEBPACK_IMPORTED_MODULE_2__.LOTTO.COUNT).map(Number);
+  var bonusNumber = Number(winningNumber[_constants__WEBPACK_IMPORTED_MODULE_2__.LOTTO.COUNT]);
   result.winningCounts = generateWinningCounts(winningNumbers, bonusNumber);
   result.earningsRate = generateEarningsRate(result.winningCounts);
   return result;
@@ -991,9 +993,7 @@ function reducer(state, _ref) {
     case _actions__WEBPACK_IMPORTED_MODULE_0__["default"].UPDATE_RESULT:
       newState.winningNumbers = payload.slice(0, _constants__WEBPACK_IMPORTED_MODULE_2__.LOTTO.COUNT);
       newState.bonusNumber = payload[_constants__WEBPACK_IMPORTED_MODULE_2__.LOTTO.COUNT];
-      newState.result = generateResult(payload.map(function (value) {
-        return Number(value);
-      }));
+      newState.result = generateResult(payload);
       return newState;
 
     case _actions__WEBPACK_IMPORTED_MODULE_0__["default"].RESTART:
@@ -1138,9 +1138,9 @@ function pickUniqueNumbersInRange(startInclusive, endInclusive, count) {
   });
   return shuffle(numbers).slice(0, count);
 }
-function intersection(array1, array2) {
-  return array1.filter(function (value) {
-    return array2.includes(value);
+function intersection(arrayA, arrayB) {
+  return arrayA.filter(function (value) {
+    return arrayB.includes(value);
   });
 }
 function calculateEarningsRate(originMoney, currentMoney) {
@@ -1269,11 +1269,11 @@ var validateMoney = function validateMoney(money) {
     return new _validation_result__WEBPACK_IMPORTED_MODULE_1__["default"](true, _constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.NOT_INTEGER_MONEY);
   }
 
-  if (parseInt(money, 10) < 1000) {
+  if (parseInt(money, 10) < _constants__WEBPACK_IMPORTED_MODULE_0__.LOTTO.PRICE) {
     return new _validation_result__WEBPACK_IMPORTED_MODULE_1__["default"](true, _constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.UNDER_MIN_MONEY);
   }
 
-  if (money % 1000) {
+  if (money % _constants__WEBPACK_IMPORTED_MODULE_0__.LOTTO.PRICE) {
     return new _validation_result__WEBPACK_IMPORTED_MODULE_1__["default"](true, _constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.NOT_DIVIDED_BY_THOUSAND);
   }
 
