@@ -583,10 +583,18 @@ var ResultModal = /*#__PURE__*/function (_Component) {
     key: "template",
     value: function template(result) {
       return "\n      <article class=\"d-flex\">\n        <img src=\"".concat(_images_close_png__WEBPACK_IMPORTED_MODULE_4__["default"], "\" class=\"close\"></img>\n        <h3>\uD83C\uDFC6 \uB2F9\uCCA8 \uD1B5\uACC4 \uD83C\uDFC6</h3>\n        <table>\n          <thead>\n            <tr>\n              <th>\uC77C\uCE58 \uAC1C\uC218</th>\n              <th>\uB2F9\uCCA8\uAE08</th>\n              <th>\uB2F9\uCCA8 \uAC1C\uC218</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <td>3\uAC1C</td>\n              <td>").concat(_constants__WEBPACK_IMPORTED_MODULE_3__.PRIZE_MONEY["5th"].toLocaleString(), "</td>\n              <td>").concat(result.winningCounts['5th'], "\uAC1C</td>\n            </tr>\n            <tr>\n              <td>4\uAC1C</td>\n              <td>").concat(_constants__WEBPACK_IMPORTED_MODULE_3__.PRIZE_MONEY["4th"].toLocaleString(), "</td>\n              <td>").concat(result.winningCounts['4th'], "\uAC1C</td>\n            </tr>\n            <tr>\n              <td>5\uAC1C</td>\n              <td>").concat(_constants__WEBPACK_IMPORTED_MODULE_3__.PRIZE_MONEY["3rd"].toLocaleString(), "</td>\n              <td>").concat(result.winningCounts['3rd'], "\uAC1C</td>\n            </tr>\n            <tr>\n              <td>5\uAC1C+\uBCF4\uB108\uC2A4\uBCFC</td>\n              <td>").concat(_constants__WEBPACK_IMPORTED_MODULE_3__.PRIZE_MONEY["2nd"].toLocaleString(), "</td>\n              <td>").concat(result.winningCounts['2nd'], "\uAC1C</td>\n            </tr>\n            <tr>\n              <td>6\uAC1C</td>\n              <td>").concat(_constants__WEBPACK_IMPORTED_MODULE_3__.PRIZE_MONEY["1st"].toLocaleString(), "</td>\n              <td>").concat(result.winningCounts['1st'], "\uAC1C</td>\n            </tr>\n          </tbody>\n        </table>\n        <label><b>\uB2F9\uC2E0\uC758 \uCD1D \uC218\uC775\uB960\uC740 ").concat(result.earningsRate, "%\uC785\uB2C8\uB2E4.</b></label>\n        <button class=\"restart btn btn-cyan mt-8\">\uB2E4\uC2DC \uC2DC\uC791\uD558\uAE30</button>\n      </article>\n    ");
-    }
+    } // eslint-disable-next-line max-lines-per-function
+
   }, {
     key: "setEvent",
     value: function setEvent() {
+      var _this = this;
+
+      this.addEvent('click', 'result-modal', function (event) {
+        event.preventDefault();
+        if (event.target !== _this) return;
+        window.store.dispatch((0,_flux_actionCreator__WEBPACK_IMPORTED_MODULE_1__["default"])(_flux_actions__WEBPACK_IMPORTED_MODULE_0__["default"].TOGGLE_RESULT_MODAL, false));
+      });
       this.addEvent('click', '.close', function (event) {
         event.preventDefault();
         window.store.dispatch((0,_flux_actionCreator__WEBPACK_IMPORTED_MODULE_1__["default"])(_flux_actions__WEBPACK_IMPORTED_MODULE_0__["default"].TOGGLE_RESULT_MODAL, false));
